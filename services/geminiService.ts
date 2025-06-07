@@ -40,7 +40,11 @@ export const classifyWasteImage = async (
       contents: [{ parts: [imagePart, textPart] }],
     });
 
-    const classificationText = response.text.trim();
+    const classificationText = response.text?.trim();
+
+    if (!classificationText) {
+      return { category: WasteCategory.UNKNOWN, error: "No response from API." };
+    }
 
     if (Object.values(WasteCategory).includes(classificationText as WasteCategory)) {
       return { category: classificationText as WasteCategory };
