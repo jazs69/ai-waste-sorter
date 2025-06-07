@@ -1,0 +1,5 @@
+
+{
+  "name": "AI Waste Sorter",
+  "description": "An application that uses AI (Gemini API) to classify waste items from an uploaded image into categories like Recyclable, Organic, E-waste, or General Waste. This app demonstrates image understanding capabilities for waste segregation. Note: The AI classification is performed by the Gemini API, not by client-side execution of models typically associated with Python libraries like TensorFlow or scikit-learn."
+}
